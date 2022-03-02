@@ -16,9 +16,11 @@
     <section class="head">
       <a name="main"></a>
       <div class="head__bg">
-        <div class="head__navigation">
-          <div class="head_burger_menu">
 
+        <!-- ------Navigation---- -->
+        <div class="head__navigation">
+          <div class="head__burger">
+            <span></span>
           </div>
           <nav class="head__navigation_menu">
             <ul class="head__menu">
@@ -28,16 +30,18 @@
               <li><a href="#contacts">Контакты</a></li>
             </ul>
           </nav>
+
           <div class="head__phone">
             <p class="head__phone_my">Есть вопросы? Звоните!</p>
-            <a href="tel:8 996 694 40 96"><img src="./image/icon-telephone.png" alt="phone"> +7 (996) 694 40 96</a>
+            <div class="head__phone_my_tel"><a href="tel:8 996 694 40 96">
+                +7 (996) 694 40 96</a></div>
           </div>
           <div class="head__phone_backcall">
             <button type="button" name="button" class="head__phone_backcall">Заказать звонок</button>
           </div>
         </div>
 
-<!-- -------TITLE------- -->
+        <!-- -------TITLE------- -->
         <section class="head__back">
           <!-- <div>
             <img src="./image/myopacity.png" alt="" class="head__logo">
@@ -65,7 +69,7 @@
 
     <section class="body__widt">
 
-<!-- -----Our prices--- ------->
+      <!-- -----Our prices--- ------->
       <section class="attribute">
         <div class="attribute__cont1">
           <p class="nano">"Сайт-визитка"</p>
@@ -101,7 +105,7 @@
         </div>
       </section>
 
-<!------ Why is we--- -->
+      <!------ Why is we--- -->
       <section>
         <div class="why__is_we">
           <h2>ПОЧЕМУ МЫ?</h2>
@@ -130,14 +134,14 @@
         </div>
       </section>
 
-<!-- -----About me------ -->
+      <!-- -----About me------ -->
       <section class="about">
         <a name="aboutme"></a>
-      <div class="about__my">
+        <div class="about__my">
           <div class="about__talk">
             <img src="./image/olivetree.png" alt="tree" class="about__tree">
           </div>
-        <div class="about__mycontent_text">
+          <div class="about__mycontent_text">
             <div class="about__mycontent">
               <img src="./image/pointer.png" alt="" width="200px" height="150px" class="about__mycontent_circle">
             </div>
@@ -147,11 +151,11 @@
               В прошлом инженер-энергетик, проработал в данном направлении более 9 лет, интерес к работе начал угасать, т.к. отрасль практически не изменяется уже многие годы. Поэтому решил перейти в более перспективную и бурно развивающуюся сферу:
               веб - программирование HTML5, CSS3, JavaScript6 (ES6).
             </p>
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-<!-- ----Примеры работ----- -->
+      <!-- ----Примеры работ----- -->
       <section>
         <div class="allworks">
           <a name="myworks"></a>
@@ -182,7 +186,7 @@
       </section>
   </main>
 
-<!-- ---Footer---- -->
+  <!-- ---Footer---- -->
   <footer>
     <a name="contacts"></a>
     <div class="foot">
@@ -206,25 +210,27 @@
         <div class="foot__contact_email"><a href="mailto:mr-tvister@mail.ru"> mr-tvister@mail.ru</a></div>
       </div>
 
-  <!-- ---Button for back message------ -->
-          <div class="foot__search">
+      <!-- ---Button for back message------ -->
+      <div class="foot__search">
 
-            <form class="foot__search_form">
-              <input type="text" name="search" placeholder="Поиск по сайту..." class="foot__search_txt">
-              <button type="submit" class="foot__search_btn"><img src="./image/magnifying_glass.png" alt="search" height="16px" width="16px"></button>
-            </form>
-          </div>
-        </div>
-        <hr>
-        <div class="foot__par">
-          <p class=""> &copyDesign by DimonEmor'off Tyumen 2022 </p>
-        </div>
-      </footer>
-      <div class="btnup">
-        <a href="#" title="up">
-          <div class="btnup_pzn"></div>
-        </a>
+        <form class="foot__search_form">
+          <input type="text" name="search" placeholder="Поиск по сайту..." class="foot__search_txt">
+          <button type="submit" class="foot__search_btn"><img src="./image/magnifying_glass.png" alt="search" height="16px" width="16px"></button>
+        </form>
       </div>
-
+    </div>
+    <hr>
+    <div class="foot__par">
+      <p class=""> &copyDesign by DimonEmor'off Tyumen 2022 </p>
+    </div>
+  </footer>
+  <div class="btnup">
+    <a href="#" title="up">
+      <div class="btnup_pzn"></div>
+    </a>
+  </div>
+  <script src="./menu.js"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 </body>
+
 </html>

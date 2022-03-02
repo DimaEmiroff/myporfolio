@@ -27,10 +27,6 @@ h1, h2, h3, h4, h5, h6, li {
   font-style: normal;
 }
 
-.adaptaion {
-  margin: 0;
-}
-
 .body__widt {
   margin: 0 60px 0 60px;
   background: #f5f5f5;
@@ -38,7 +34,6 @@ h1, h2, h3, h4, h5, h6, li {
   box-shadow: 3px 4px 14px 5px #000000;
   opacity: 0.8;
   max-width: 100%;
-
 }
 
 /*-==========Header==========-*/
@@ -102,6 +97,20 @@ h1, h2, h3, h4, h5, h6, li {
   font-size: 20px;
   text-align: center;
   color: #ffffff;
+}
+
+.head__phone_my_tel {
+  position: relative;
+}
+
+.head__phone_my_tel::before {
+  content: "";
+  background-image: url(./image/icon-telephone.png);
+  width: 16px;
+  height: 16px;
+  background-repeat: no-repeat;
+  position: absolute;
+  left: -19px;
 }
 
 .head__phone a {
@@ -543,14 +552,14 @@ h1, h2, h3, h4, h5, h6, li {
 
 .foot__contact_email {
   position: relative;
-  padding-left: 8px;
+  padding: 10px 0 0 8px;
 }
 
 .foot__contact_email::before {
   content: "";
   position: absolute;
   background: url(./image/icon-email.png);
-  top: 6px;
+  top: 16px;
   left: -17px;
   width: 17px;
   height: 17px;
@@ -622,6 +631,7 @@ h1, h2, h3, h4, h5, h6, li {
   background: #f4be00;
   color: #ffffff;
   border-radius: 20px;
+  font-size: 16px;
 }
 
 .foot__send_btn:hover {
@@ -676,62 +686,114 @@ h1, h2, h3, h4, h5, h6, li {
   z-index: 10;
 }
 
-.head_burger_menu {
+.head__burger {
   display: none;
   width: 32px;
   height: 4px;
+  left: 20px;
   background: #f4be00;
-  position: relative;
+  align-items: center;
+  position: absolute;
+  cursor: pointer;
 }
 
-.head_burger_menu::after,
-.head_burger_menu::before {
+.head__burger>span,
+.head__burger>span::after,
+.head__burger>span::before {
   content: "";
+  display: block;
   background: #f4be00;
-  width: 32px;
+  width: 100%;
   height: 4px;
   position: absolute;
-  top: -10px;
   left: 0;
 }
 
-.head_burger_menu::after {
-  left: 0;
-  top: 12px;
+.head__burger>span::before {
+  top: -11px;
 }
+
+.head__burger>span::after {
+  top: 11px;
+}
+
+.head__burger:checked~.menu-btn>span {
+  transform: rotate(45deg);
+}
+
+.head__burger:checked~.menu-btn>span::before {
+  top: 0;
+  transform: rotate(0);
+}
+
+.head__burger:checked~.menu-btn>span::after {
+  top: 0;
+  transform: rotate(90deg);
+}
+
+.head__burger:checked~.menubox {
+  visibility: visible;
+  left: 0;
+}
+
 .head__back_btn_phone {
   display: none;
 }
-/*Адаптация*/
+
+/*-==========Mobile adaptaion=======-*/
 @media screen and (max-width: 767px) {
-  .head__navigation_menu,
+
   .head__back_msg_form,
   .head__phone_my,
-  .head__phone_backcall {
+  .head__phone_backcall,
+  .about__talk {
     display: none;
   }
+
+  .head__menu {
+    display: block;
+    position: fixed;
+    visibility: hidden;
+    top: 0;
+    left: -100%;
+    width: 300px;
+    height: 100%;
+    margin: 0;
+    padding: 80px 0;
+    list-style: none;
+    background-color: #ECEFF1;
+    box-shadow: 1px 0px 6px rgba(0, 0, 0, .2);
+    transition-duration: .25s;
+  }
+
   .head__back {
     padding: 5px;
   }
+
   .head__back_all {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     font-size: 14px;
   }
+
   .head__title_fav {
     margin-top: 60px;
     font-size: 18px;
   }
-  .head_burger_menu {
+
+  .head__burger {
     display: flex;
   }
+
   .head__navigation {
-    height: 30px;
+    height: 50px;
   }
-   .head__phone a {
-     font-size: 20px;
-   }
+
+  .head__phone a {
+    font-size: 20px;
+  }
+
   .adaptaion {
     margin: auto 2px;
   }
@@ -746,22 +808,28 @@ h1, h2, h3, h4, h5, h6, li {
     background: #f4be00;
     color: #ffffff;
     border-radius: 2px;
+    font-size: 16px;
   }
+
   .attribute {
     display: block;
   }
+
   .why__is_we_circle {
     display: flex;
     flex-direction: column;
   }
+
   .body__widt {
     width: 76%;
   }
+
   .foot {
     display: flex;
     flex-direction: column;
   }
+
   .foot__socicons_param {
-    margin: 10px 0 10px 0;
+    margin: 20px 0 10px 0;
   }
 }
