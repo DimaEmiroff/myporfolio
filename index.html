@@ -34,12 +34,35 @@
           <div class="head__phone_my_tel"><a href="tel:8 996 694 40 96">
             +7 (996) 694 40 96</a></div>
         </div>
-        <div class="head__phone_backcall">
-          <button type="button" name="button" class="head__phone_backcall">Заказать звонок</button>
+        <div>
+          <button type="button" id="modal__callYouback" class="head__phone_backcall">Заказать звонок</button>
         </div>
       </div>
-
-      <!-- -------TITLE------- -->
+    <div class="popup__bg">
+      <form class="popup">
+        <button class="close-popup">X</button>
+        <label>
+          <input type="text" name="name">
+          <div class="label__text">
+            Ваше имя
+          </div>
+        </label>
+        <label>
+          <input type="tel" name="tel">
+          <div class="label__text">
+            Ваш телефон
+          </div>
+        </label>
+        <label>
+          <textarea name="message"></textarea>
+          <div class="label__text">
+            Ваше сообщение
+          </div>
+        </label>
+        <button class="popup__btn" type="submit">Отправить</button>
+      </form>
+    </div>
+    <!-- -------TITLE------- -->
       <section class="head__back">
         <!-- <div>
           <img src="./image/myopacity.png" alt="" class="head__logo">
@@ -223,8 +246,8 @@
       <div class="btnup_pzn"></div>
     </a>
   </div>
+  <script src="./modalForm.js"></script>
   <script src="./menu.js"></script>
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 </body>
 
 </html>
