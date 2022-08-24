@@ -593,24 +593,9 @@ h1, h2, h3, h4, h5, h6, li {
 .big:focus {
   width: 400px;
   height: 1100px;
-  transition: .3s ease-in-out;
+  transition: .3s all;
 }
 
-#bigs {
-  width: 80px;
-  height: 150px;
-  cursor: pointer;
-}
-
-#bigs:hover {
-  filter: drop-shadow(5px 5px 4px #f4be00);
-}
-
-#bigs:focus {
-  width: 170px;
-  height: 1000px;
-  transition: .3s ease-in-out;
-}
 
 /* -========Footer Contacts=========- */
 .foot {
