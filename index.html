@@ -41,24 +41,9 @@
     <div class="popup__bg">
       <form class="popup">
         <button class="close-popup">X</button>
-        <label>
-          <input type="text" name="name">
-          <div class="label__text">
-            Ваше имя
-          </div>
-        </label>
-        <label>
-          <input type="tel" name="tel">
-          <div class="label__text">
-            Ваш телефон
-          </div>
-        </label>
-        <label>
-          <textarea name="message"></textarea>
-          <div class="label__text">
-            Ваше сообщение
-          </div>
-        </label>
+          <input type="text" required placeholder="Ваше имя" name="name">
+          <input type="tel" required placeholder="Ваше номер телефона" name="tel">
+          <textarea placeholder="Ваше сообщение" name="message"></textarea>
         <button class="popup__btn" type="submit">Отправить</button>
       </form>
     </div>

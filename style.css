@@ -158,21 +158,25 @@ h1, h2, h3, h4, h5, h6, li {
   opacity: 1;
   pointer-events: all;
   transition: 0.5s all;
+  z-index: 1;
 }
 
 .popup {
   position: absolute;
-  top: 50%;
+  top: 30%;
   left: 50%;
   transform: translate(-50%, -50%) scale(0);
   background: #fff;
   width: 400px;
+  box-shadow: 1px 4px 5px #eeeeee;
+  border: 5px solid #f4be00;
+  border-radius: 8px;
   padding: 25px;
-  transition: 0.5s all;
+  transition: 0.3s all;
 }
 
 .popup.active {
-  transform: translate(-50%, -50%) scale(1);
+  transform: translate(-50%, -20%) scale(1);
   transition: 0.5s all;
 }
 /* Конец важной части */
@@ -187,31 +191,23 @@ h1, h2, h3, h4, h5, h6, li {
   border: none;
 }
 
-.popup label {
-  width: 100%;
-  margin-bottom: 25px;
-  display: flex;
-  flex-direction: column-reverse;
-}
-
-.popup .label__text {
-  font-size: 14px;
-  text-transform: uppercase;
-  font-weight: 500;
-  color: #cfd0d3;
-  margin-bottom: 5px;
-}
-
 .popup input {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 25px;
   height: 45px;
   font-size: 18px;
   border: none;
   outline: none;
   border-bottom: 1px solid #cfd0d3;
+  text-transform: uppercase;
+  font-weight: 500;
+  color: #cfd0d3;
 }
 
 .popup input:focus {
   border-bottom: 1px solid #2982ff;
+  color: #868686;
 }
 
 .popup input:focus + .label__text {
@@ -249,7 +245,7 @@ h1, h2, h3, h4, h5, h6, li {
   background: #2982ff;
   cursor: pointer;
   text-transform: uppercase;
-  transition: 0.5s all;
+  transition: 0.3s all;
 }
 
 .popup button:hover {
